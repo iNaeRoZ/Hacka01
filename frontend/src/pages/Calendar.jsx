@@ -5,12 +5,11 @@ import "../style/Calendar.css";
 function Calendar() {
   const gifts = useLoaderData();
   return (
-    <div className="list-movies">
+    <div className="list-gift">
       {gifts.map((gift) => {
         return (
-          <div>
-            <img src={gift.image} alt={gift.image} />
-            <h4>{gift.description}</h4>
+          <div className="cadeau">
+            <img src={gift.imageCadeau} alt={gift.image} />
           </div>
         );
       })}
