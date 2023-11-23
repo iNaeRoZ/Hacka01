@@ -4,12 +4,17 @@ import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
+import About from "./pages/About";
 import Calendar from "./pages/Calendar";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
   {
     path: "/calendar",
