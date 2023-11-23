@@ -5,10 +5,10 @@ const tables = require("../tables");
 const browse = async (req, res, next) => {
   try {
     // Fetch all items from the database
-    const gifts = await tables.gift.readAll();
+    const items = await tables.item.readAll();
 
     // Respond with the items in JSON format
-    res.json(gifts);
+    res.json(items);
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -19,14 +19,14 @@ const browse = async (req, res, next) => {
 const read = async (req, res, next) => {
   try {
     // Fetch a specific item from the database based on the provided ID
-    const gift = await tables.gift.read(req.params.id);
+    const item = await tables.item.read(req.params.id);
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
-    if (gift == null) {
+    if (item == null) {
       res.sendStatus(404);
     } else {
-      res.json(gift);
+      res.json(item);
     }
   } catch (err) {
     // Pass any errors to the error-handling middleware
@@ -40,11 +40,11 @@ const read = async (req, res, next) => {
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
   // Extract the item data from the request body
-  const gift = req.body;
+  const item = req.body;
 
   try {
     // Insert the item into the database
-    const insertId = await tables.gift.create(gift);
+    const insertId = await tables.item.create(item);
 
     // Respond with HTTP 201 (Created) and the ID of the newly inserted item
     res.status(201).json({ insertId });
