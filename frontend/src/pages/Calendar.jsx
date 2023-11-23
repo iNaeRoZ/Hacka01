@@ -9,6 +9,7 @@ function Calendar() {
       {gifts.map((gift) => {
         return (
           <div className="cadeau">
+            oui
             <img src={gift.imageCadeau} alt={gift.image} />
           </div>
         );
