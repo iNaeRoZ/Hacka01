@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
@@ -12,8 +12,16 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/Calendar",
+    path: "/calendar",
     element: <Calendar />,
+    loader: ({ request }) => {
+      const query = new URL(request.url).search;
+
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/gift${query}`)
+        .then((res) => res.data)
+        .catch((err) => console.error(err));
+    },
   },
 ]);
 
