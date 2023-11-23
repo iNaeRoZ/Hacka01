@@ -3,3 +3,13 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.img-modal {
+  max-width: 415px;
+  max-height: 392px;
+}
+
+.description-modal {
+  display: flex;
+  justify-content: center;
+}
