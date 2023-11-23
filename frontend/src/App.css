@@ -1,4 +1,16 @@
-* {
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
   margin: 0;
-  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  font-family: cherry swash;
+  font-size: 25px;
+  text-decoration: none;
 }

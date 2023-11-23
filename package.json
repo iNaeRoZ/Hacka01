@@ -36,5 +36,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5"
   }
 }
