@@ -1,14 +1,52 @@
-.tout {
+.about {
   background: url("../assets/Background-about.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
 }
-.boule {
-  background: url("../assets/Boules-about.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: 65%;
+
+.tete-anto,
+.tete-seb,
+.tete-hedi,
+.tete-tibo,
+.tete-max {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-middle,
+.bottom-right {
+  position: relative;
+  width: 9.5em;
+}
+
+.top-left {
+  margin: 220px 0 0 350px;
+}
+.top-right {
+  margin: 170px 640px 0 0;
+}
+.bottom-left {
+  margin: -10px 0 30px 180px;
+}
+.bottom-middle {
+  margin: 0 40px 0 0;
+}
+.bottom-right {
+  margin: -10px 450px 0 0;
 }
