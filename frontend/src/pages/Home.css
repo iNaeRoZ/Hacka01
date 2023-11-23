@@ -1,37 +1,17 @@
 .page {
-  background: url("../public/sapin.jpg");
+  background: url("../public/accueil.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
 }
-.traineau-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50rem;
-  position: relative;
-  top: 22rem;
-  left: 3.5rem;
-}
-train {
-  background: url("../puclic/traineau.png");
-  color: aqua;
-}
+
 .merry {
-  font-size: 7.5rem;
-  font-family: Fleur De Leah;
+  font-size: 9.5rem;
+  font-family: great vibes;
   color: rgb(240, 18, 18);
-}
-.about {
-  background-color: rgb(240, 18, 18);
-  color: aliceblue;
-  font-size: 1.5rem;
-  font-family: cherry bomb one;
-  font-weight: 100;
   text-align: center;
-  padding-bottom: 0.5rem;
-  border-radius: 15px;
-  width: 10rem;
-  height: 1.8rem;
+  position: relative;
+  top: 25rem;
+  margin: 0;
 }
