@@ -1,0 +1,14 @@
+.tout {
+  background: url("../assets/Background-about.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.boule {
+  background: url("../assets/Boules-about.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 65%;
+}

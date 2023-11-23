@@ -1,32 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import axios from "axios";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import About from "./pages/About";
+import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
+import About from "./pages/About";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/calendar",
-    element: <Calendar />,
-    loader: ({ request }) => {
-      const query = new URL(request.url).search;
-
-      return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/gift${query}`)
-        .then((res) => res.data)
-        .catch((err) => console.error(err));
-    },
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/calendar",
+        element: <Calendar />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 
