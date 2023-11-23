@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       const query = new URL(request.url).search;
 
       return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/gift${query}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/gift${query}`)
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
