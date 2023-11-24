@@ -16,3 +16,53 @@
   top: 22rem;
   margin: 0;
 }
+
+.surprise {
+  font-size: 3rem;
+  font-family: great vibes;
+  font-weight: 100;
+  color: rgb(240, 18, 18);
+  text-align: center;
+  position: relative;
+  top: 24rem;
+  margin: 0;
+}
+
+.buttonSurprise {
+  background-color: #eee;
+  font-family: great vibes;
+  border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  width: 7em;
+  border-radius: 1rem;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.buttonSurprise:active {
+  color: white;
+  transform: translateY(0.2rem);
+}
+
+.buttonSurprise:hover:not(:disabled) {
+  background: rgb(255, 0, 0);
+  color: white;
+}
+
+.buttonSurprise:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.buttonSurprisee {
+  display: flex;
+
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  top: 26rem;
+  margin: 0;
+  text-decoration: none;
+}

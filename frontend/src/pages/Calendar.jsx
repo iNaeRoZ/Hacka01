@@ -8,18 +8,24 @@ function Calendar() {
   const [selectCadeau, setSelectCadeau] = useState(null);
   const [clickCadeau, setClickCadeau] = useState(new Set());
   const [blockbyID, setblockbyID] = useState(1);
+  const [showPopup, setShowPopup] = useState(false);
 
   const openImageDetails = (gift) => {
     if (clickCadeau.has(blockbyID) || gift.id === blockbyID) {
       setSelectCadeau(gift);
       setClickCadeau(new Set(clickCadeau).add(gift.id));
-
       setblockbyID(blockbyID + 1);
+    } else {
+      setShowPopup(true);
     }
   };
 
   const closeImageDetails = () => {
     setSelectCadeau(null);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -46,6 +52,24 @@ function Calendar() {
         </div>
       )}
 
+      {showPopup && (
+        <div className="modal">
+          <div className="modal-content">
+            <p className="description-modal">
+              Tu est sur que c'est le bon jour ??!
+            </p>
+            <img
+              className="img-modal"
+              src="https://pbs.twimg.com/media/CLGV66dUMAALhjv.jpg"
+              alt="anrold"
+            />
+            <button className="close-modal" type="button" onClick={closePopup}>
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="listflex">
         <div className="list-gift">
           {gifts.map((gift) => {
@@ -65,7 +89,6 @@ function Calendar() {
               >
                 <img src={imageSrc} alt={gift.image} />
               </div>
-
               /* eslint-enable */
             );
           })}
