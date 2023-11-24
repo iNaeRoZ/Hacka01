@@ -24,12 +24,14 @@ function Navbar() {
     /* eslint-disable */
     <div className="nav">
       <div className="nav-link">
-        <img
-          src={currentLogo}
-          onClick={handleLogoClick}
-          className="nav-logo"
-          alt="Calendar_logo"
-        />
+        <Link to="*">
+          <img
+            src={currentLogo}
+            onClick={handleLogoClick}
+            className="nav-logo"
+            alt="Calendar_logo"
+          />
+        </Link>
       </div>
       <div className="non" />
       <Link className={`nav-link ${isActiveLink("/") ? "active" : ""}`} to="/">
