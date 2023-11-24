@@ -1,0 +1,22 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.texterr {
+  display: flex;
+}
+
+.textError {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: red;
+}
+
+.texterror {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: green;
+}
