@@ -12,10 +12,7 @@ function About() {
   return (
     <div className="about">
       <div className="top-row">
-        <Link
-          className="hedi-link"
-          to="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        >
+        <Link className="hedi-link" to="https://github.com/Phoulos">
           <img src={Hedi} className="top-left" alt="tete-hedi" />
         </Link>
         <Link className="seb-link" to="https://github.com/Romeoseb-dev">
