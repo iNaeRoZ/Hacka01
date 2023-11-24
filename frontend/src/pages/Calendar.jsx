@@ -46,27 +46,30 @@ function Calendar() {
         </div>
       )}
 
-      <div className="list-gift">
-        {gifts.map((gift) => {
-          let imageSrc;
-          if (clickCadeau.has(gift.id)) {
-            imageSrc = gift.imageCadeauOuvert;
-          } else {
-            imageSrc = gift.imageCadeau;
-          }
+      <div className="listflex">
+        <div className="list-gift">
+          {gifts.map((gift) => {
+            let imageSrc;
+            if (clickCadeau.has(gift.id)) {
+              imageSrc = gift.imageCadeauOuvert;
+            } else {
+              imageSrc = gift.imageCadeau;
+            }
 
-          return (
-            /* eslint-disable */
-            <div
-              key={gift.id}
-              className="cadeau"
-              onClick={() => openImageDetails(gift)}
-            >
-              <img src={imageSrc} alt={gift.image} />
-            </div>
-            /* eslint-enable */
-          );
-        })}
+            return (
+              /* eslint-disable */
+              <div
+                key={gift.id}
+                className="cadeau"
+                onClick={() => openImageDetails(gift)}
+              >
+                <img src={imageSrc} alt={gift.image} />
+              </div>
+
+              /* eslint-enable */
+            );
+          })}
+        </div>
       </div>
     </>
   );
