@@ -1,5 +1,22 @@
-.list-gift {
+.listflex {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 10%;
+}
+
+.list-gift {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.img-modal {
+  max-width: 415px;
+  max-height: 392px;
+}
+
+.description-modal {
+  display: flex;
+  justify-content: center;
 }
