@@ -7,6 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
 import About from "./pages/About";
+import Error from "./components/Error";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "*",
+        element: <Error />,
       },
     ],
   },
